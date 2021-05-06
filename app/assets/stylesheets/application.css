@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  height:1200px;
+  margin: 20px;
+  color: grey;
+}
+
+.top-all {
+  float: left;
+  padding-left: 25px;
+}
+
+.info p,span {
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 13px;
+}
+
+index-all {
+  margin: 20px;
+}
+
+table {
+  text-align: left;
+  float: left;
+}
+
+.Books {
+  color: black;
+}
+
+.New-Book {
+  float: left;
+  height: 300px;
+  margin-top: 0px;
+  margin-right: 300px;
+  color: black;
+}
