@@ -14,40 +14,46 @@
  *= require_self
  */
 
-body {
-  height:1200px;
-  margin: 20px;
-  color: grey;
+ body {
+   margin: 30px;
+ }
+
+ .Title {
+   text-align: center;
+ }
+
+ .title-box {
+   height: 50px;
+ }
+
+.body-box {
+  height: 50px;
+}
+ .books {
+   height: 350px;
+ }
+
+label {
+  display: block;
 }
 
-.top-all {
-  float: left;
-  padding-left: 25px;
+ table {
+   text-align: left;
+ }
+
+ .Newbook {
+  margin-top: 50px;
+  display: inline-block;
+ }
+
+.create-buttun {
+  padding-top: 20px;
 }
 
-.info p,span {
-  padding: 10px;
-  padding-left: 30px;
-  font-size: 13px;
+table th,td {
+  font-weight: lighter;
 }
 
-index-all {
-  margin: 20px;
-}
-
-table {
-  text-align: left;
-  float: left;
-}
-
-.Books {
-  color: black;
-}
-
-.New-Book {
-  float: left;
-  height: 300px;
-  margin-top: 0px;
-  margin-right: 300px;
-  color: black;
+table th,td,tr {
+  padding: 5px;
 }
