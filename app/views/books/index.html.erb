@@ -1,7 +1,6 @@
 <html>
   <body>
     <div class="index-all">
-    <div class="books">
     <h2>Books</h2>
     <table>
 
@@ -12,99 +11,47 @@
         </tr>
       </div>
 
-      <div class="erements">
+      <% @books.each do |book| %>
       <tr>
-        <th>リーダブルコード</th>
-        <th>より良いコードを書くためのシンプルで実践的なテクニック</th>
-        <div class="link-action"></div>
-          <td>show</td>
-          <td>Edit</td>
-          <td>Destroy</td>
-        </div>
+        <th><%= book.title %></th>
+        <th><%= book.body %>
+          <%= link_to "show", book_path(book.id) %>
+          <%= link_to "edit", edit_book_path(book.id) %>
+          <%= link_to "delete", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+        </th>
       </tr>
-
-      <tr>
-        <th>トラブル知らずのシステム設定</th>
-        <th>bシステム設計の要点を図解で説明してくれます</th>
-        <div class="link-action"></div>
-          <td>show</td>
-          <td>Edit</td>
-          <td>Destroy</td>
-        </div>
-      </tr>
-
-      <tr>
-        <th>たのしいRuby</th>
-        <th>Rubyの入門におすすめです</th>
-        <div class="link-action"></div>
-          <td>show</td>
-          <td>Edit</td>
-          <td>Destroy</td>
-        </div>
-      </tr>
-
-      <tr>
-        <th>入門Git</th>
-        <th>gitについての基本操作から内部構造まで解説してくれます</th>
-        <div class="link-action"></div>
-          <td>show</td>
-          <td>Edit</td>
-          <td>Destroy</td>
-        </div>
-      </tr>
-
-      <tr>
-        <th>アルゴリズム図鑑</th>
-        <th>アルゴリズムについてカラーイラストでしっかり解説してくれます</th>
-        <div class="link-action"></div>
-          <td>show</td>
-          <td>Edit</td>
-          <td>Destroy</td>
-        </div>
-      </tr>
-
-      <tr>
-        <th>達人プログラマー	プログラマ入門者は必読！</th>
-        <th>データベース実践入門	効率的なSQL文を教えてくれます</th>
-        <div class="link-action"></div>
-          <td>show</td>
-          <td>Edit</td>
-          <td>Destroy</td>
-        </div>
-      </tr>
-
-      <tr>
-        <th>データベース実践入門</th>
-        <th>効率的なSQL文を教えてくれます</th>
-        <div class="link-action"></div>
-          <td>show</td>
-          <td>Edit</td>
-          <td>Destroy</td>
-        </div>
-      </tr>
-    </div>
-
-    </table>
-  </div>
-
-    <div class="NewBook">
-    <header>
-      <h2>New Book</h2>
-    </header>
-    <%= form_with model: @book, url:'/new', local:true do |f| %>
-      <div class="title-box">
-        <label>Title</label>
-        <%= f.text_field :title %>
-      </div>
-      <div class="body-box">
-        <label>Body</label>
-      <%= f.text_area :body %>
-      </div>
-      <div class="create-buttun">
-        <%= f.submit 'Create Book' %>
-      </div>
       <% end %>
+
+      <tr>
+        <th><%= @book.title %></th>
+        <th><%= @book.body %></th>
+        <div class="link-action">
+          <td>show</td>
+          <td>Edit</td>
+          <td>Destroy</td>got
+        </div>
+      </tr>
+
     </div>
-  </body>
+    </table>
+    <div class="NewBook">
+      <header>
+        <h2>New Book</h2>
+      </header>
+      <%= form_with model: @book, local:true do |f| %>
+        <div class="title-box">
+          <label>Title</label>
+          <%= f.text_field :title %>
+       </div>
+        <div class="body-box">
+          <label>Body</label>
+          <%= f.text_area :body %>
+        </div>
+        <div class="create-buttun">
+          <%= f.submit 'Create Book' %>
+        </div>
+        <% end %>
+      </div>
+    </body>
   </div>
 </html>

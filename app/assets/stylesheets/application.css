@@ -42,8 +42,7 @@ label {
  }
 
  .Newbook {
-  margin-top: 50px;
-  display: inline-block;
+  margin-top: 500px;
  }
 
 .create-buttun {
@@ -56,4 +55,15 @@ table th,td {
 
 table th,td,tr {
   padding: 5px;
+}
+
+.show-all {
+    height: auto;
+}
+
+.show-colortext {
+}
+
+.index-all {
+    flex-direction: column
 }

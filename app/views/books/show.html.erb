@@ -3,17 +3,28 @@
     <head>
         <div class="show-text">
             <div class="show-colortext">
+                <p>Book was successfully created.</p>
             </div>
-            <p>Title</p>
-            <p>Body</p>
+
+            <p>Title :<%= @book.title %></p>
+            <div class="text-title">
+
+
+
+            </div>
+
+            <p>Body :<%= @book.body %></p>
+            <div class="text-body">
+
+            </div>
+
         </div>
     </head>
 
     <body>
         <div class="new-buttn">
-            <%= link_to "Edit"%>
+            <%= link_to "Edit", edit_book_path(@book.id) %>
         <%= link_to "Back", "/books" %>
         </div>
     </body>
-
 </div>
