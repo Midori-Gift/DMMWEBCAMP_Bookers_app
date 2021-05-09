@@ -3,7 +3,9 @@
     <head>
         <div class="show-text">
             <div class="show-colortext">
-                <p>Book was successfully created.</p>
+                <span class="flash-message">
+          <%= flash[:notice] %>
+        </span>
             </div>
 
             <p>Title :<%= @book.title %></p>

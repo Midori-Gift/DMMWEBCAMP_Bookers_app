@@ -15,11 +15,27 @@
  */
 
  body {
-   margin: 30px;
+   margin: 10px 30px;
  }
+
+ .index-header {
+     display: flex;
+ }
+
+.flash-message {
+    padding: 5px 20px;
+    margin: 20px 50px 40px 50px;
+    color: cyan;
+}
 
  .Title {
    text-align: center;
+ }
+
+ .title-th-text {
+ }
+
+ .body-th-text {
  }
 
  .title-box {
@@ -61,9 +77,21 @@ table th,td,tr {
     height: auto;
 }
 
-.show-colortext {
-}
 
 .index-all {
     flex-direction: column
+}
+
+
+.notifications {
+    color: white;
+    text-align: center;
+}
+
+.notice {
+    background-color: lightblue;
+}
+
+.alert {
+    background-color: orange;
 }
